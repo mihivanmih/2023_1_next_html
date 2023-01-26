@@ -1,0 +1,34 @@
+.sound {
+  width: 52px;
+  height: 52px;
+  background-size: 100%;
+  position: absolute;
+  z-index: 55;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+
+  &:hover {
+    width: 52px;
+    height: 52px;
+    background-size: 100%;
+    position: absolute;
+    z-index: 55;
+    right: 20px;
+    top: 20px;
+  }
+}
+
+.mute {
+  background-image: url("../public/img/icon/free-icon-mute-3293735.png");
+  &:hover {
+    background-image: url("../public/img/icon/free-icon-mute-3293723.png");
+  }
+}
+
+.active {
+  background-image: url("../public/img/icon/free-icon-sound-3293631.png");
+  &:hover {
+    background-image: url("../public/img/icon/free-icon-sound-3293615.png");
+  }
+}
