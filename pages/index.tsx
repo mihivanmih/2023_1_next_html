@@ -1,14 +1,11 @@
-import Wither from "@/pages/witcher/wither";
+import Witcher from "@/pages/witcher/index";
 import MainLayout from "@/layots/MainLayout";
-
-// нужно перенести css
-// передавать мелодию в компонент
 
 export default function Home() {
   return (
     <>
         <MainLayout>
-            <Wither />
+            <Witcher />
         </MainLayout>
     </>
   )

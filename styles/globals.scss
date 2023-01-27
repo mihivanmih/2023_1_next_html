@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: black;
+}
+:root {
+  --transition: 1.75s cubic-bezier(.2, .6, 0, 1);
+
+  --sizeindex: calc(1vw + 1vh)
+  //--transition: .75s cubic-bezier(.2, .6, 0, 1)
+}
+
+#__next {
+  height: 100%;
+}
+
+@font-face {
+  font-family: raleway_m;
+  src: url("../public/miami/fonts/raleway-v22-cyrillic-300.woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: raleway_m;
+  src: url("../public/miami/fonts/raleway-v22-cyrillic-900.woff2");
+  font-weight: 900;
+}
+
+.miami .swiper-wrapper {
+  transition:  .03s cubic-bezier(.2, .6, 0, 1) !important;
+  will-change: transform;
+}
