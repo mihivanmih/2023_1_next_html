@@ -13,10 +13,10 @@ const Witcher: FC = () => {
 
     return (
         <>
-            <Script src="/libs/particles/particles.js" />
             <Head>
                 <title>The wither</title>
             </Head>
+            <Script src="/libs/particles/particles.js" />
             <Sound melody={"/sounds/Pesnya_Priscilly.mp3"} refSound={refSound} refPlayer={refPlayer}/>
             <Swiper
                 speed={2400}

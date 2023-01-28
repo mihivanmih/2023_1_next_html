@@ -7,10 +7,7 @@ const Navbar = () => {
     const [toggle, setToggle] = useState(false)
     const menuLeft = useRef(null);
 
-    const handlerClick = (e) => {
-
-        console.log("menuLeft0", menuLeft)
-
+    const handlerClick = (e:any) => {
         if (!toggle) {
             e.currentTarget?.classList.add(`${styles.open}`)
             setToggle(true)
@@ -33,6 +30,7 @@ const Navbar = () => {
                     <div className={styles.menuLink}>
                         <Link href="/">The Wither</Link>
                         <Link href="/miami">GTA Vice City</Link>
+                        <Link href="/gsap">GSAP</Link>
                     </div>
                 </div>
             </div>
