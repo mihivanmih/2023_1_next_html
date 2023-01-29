@@ -28,9 +28,10 @@ const Navbar = () => {
             <div className={styles.navbar} >
                 <div className={styles.menuLeft} ref={menuLeft}>
                     <div className={styles.menuLink}>
-                        <Link href="/">The Wither</Link>
-                        <Link href="/miami">GTA Vice City</Link>
-                        <Link href="/gsap">GSAP</Link>
+                        <a href="/">The Wither</a>
+                        <a href="/miami">GTA Vice City</a>
+                        <a href="/gsap">GSAP</a>
+                        <a href="/portfolio">Portfolio</a>
                     </div>
                 </div>
             </div>

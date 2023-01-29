@@ -15,7 +15,7 @@ const Miami: FC = () => {
     const refSound = useRef<HTMLInputElement>(null)
     const refPlayer = useRef<HTMLInputElement>(null)
 
-    const handlerClick = (e) => {
+    const handlerClick = (e:any) => {
         if (!toggle) {
             e.currentTarget?.classList.add(`${styles.opened}`)
             setToggle(true)
@@ -35,11 +35,8 @@ const Miami: FC = () => {
 
     return (
         <>
-            <Head>
-                <title>Grand Theft Auto: Vice City</title>
-            </Head>
             <Sound melody={"/sounds/vice_city.mp3"} refSound={refSound} refPlayer={refPlayer}/>
-            <MainLayout>
+            <MainLayout title={'Grand Theft Auto: Vice City'}>
                 <div className={`miami ${styles.miami}`}>
 
                     <div className={styles.description} ref={oneSlideTextRef}>
