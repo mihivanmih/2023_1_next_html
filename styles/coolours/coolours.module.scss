@@ -1,0 +1,44 @@
+.color {
+  height: 100vh;
+  display: flex;
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&family=Nunito:wght@300;400;500;600;700;800;900&display=swap');
+  font-family: 'Nunito', sans-serif;
+  background: #ccc;
+}
+
+.col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  & h2 {
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background 0.3s;
+
+    &:hover {
+      background: rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+  }
+
+  & button {
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background 0.3s;
+
+    &:hover {
+      background: rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+
+  }
+
+}

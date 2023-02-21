@@ -11,7 +11,7 @@ const Miami: FC = () => {
 
     const [controlledSwiper, setControlledSwiper] = useState(null)
     const [toggle, setToggle] = useState(false);
-    const oneSlideTextRef = useRef(null);
+    const oneSlideTextRef = useRef<HTMLDivElement>(null);
     const refSound = useRef<HTMLInputElement>(null)
     const refPlayer = useRef<HTMLInputElement>(null)
 
@@ -33,6 +33,7 @@ const Miami: FC = () => {
         }
     }
 
+    // @ts-ignore
     return (
         <>
             <Sound melody={"/sounds/vice_city.mp3"} refSound={refSound} refPlayer={refPlayer}/>
