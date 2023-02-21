@@ -5,7 +5,7 @@ import Link from "next/link";
 const Navbar = () => {
 
     const [toggle, setToggle] = useState(false)
-    const menuLeft = useRef(null);
+    const menuLeft = useRef<HTMLDivElement>(null);
 
     const handlerClick = (e:any) => {
         if (!toggle) {
@@ -32,6 +32,7 @@ const Navbar = () => {
                         <a href="/miami">GTA Vice City</a>
                         <a href="/gsap">GSAP</a>
                         <a href="/portfolio">Portfolio</a>
+                        <a href="/coolours">Coolours</a>
                     </div>
                 </div>
             </div>
