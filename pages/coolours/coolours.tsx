@@ -19,26 +19,39 @@ const Coolours: FC = () => {
 
     // что бы работал querySelectorAll нужно обернуть в провайдер
    // if (process.browser) {
-    const setRandomColors = () => {
+    const setRandomColors = (isInitial) => {
+        const colors = isInitial ? getColorsFromHash() : []
+
         const colAll = document.querySelectorAll<HTMLElement>(`.${styles.col}`)
-        colAll.forEach(col => {
+        colAll.forEach((col, index) => {
             const isLocked = col.querySelector('button i').classList.contains('fa-lock')
             const text = col.querySelector('h2')
             const button = col.querySelector('button')
             // const color = generateRandomColor()
 
             if(isLocked) {
+                colors.push(text.textContent)
                 return
             }
 
-            const color = chroma.random()
+            const color = isInitial
+                ? colors[index]
+                     ? colors[index]
+                     : chroma.random()
+                : chroma.random()
+
+            if(!isInitial) {
+                colors.push(color)
+            }
+
             col.style.background = color
             text.textContent = color
 
             setTextColor(text, color)
             setTextColor(button, color)
-
         })
+        console.log("colors", colors)
+        updateColorsHash(colors)
     }
 
     const setTextColor = (text, color) => {
@@ -46,14 +59,11 @@ const Coolours: FC = () => {
         text.style.color = luminance > 0.5 ? '#000' : '#fff'
     }
 
-    useEffect(() => {
-        setRandomColors()
-    }, [])
 
     document.addEventListener('keydown', (e) => {
         e.preventDefault()
         if (e.keyCode === 32) { //space
-            setRandomColors()
+            setRandomColors(null)
         }
     })
 
@@ -73,6 +83,23 @@ const Coolours: FC = () => {
         return navigator.clipboard.writeText(e.target.innerText)
     }
 
+    const updateColorsHash = (colors = []) => {
+        document.location.hash = colors.map(col => {
+            return col.toString().substring(1)
+        }).join('-') 
+    }
+
+    const getColorsFromHash = () => {
+      if(document.location.hash.length > 1) {
+         return document.location.hash.substring(1).split('-').map(color => '#' + color)
+      }
+      return []
+    }
+
+    useEffect(() => {
+        setRandomColors(true)
+    }, [])
+    
     return (
         <div title={ 'Color' } >
             <div className={ `color ${ styles.color }` } >
