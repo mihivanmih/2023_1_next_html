@@ -7,9 +7,10 @@ interface MainLayoutProps {
     description?: string;
     keywords?: string;
     children: any;
+    className?: string;
 }
 
-const MainLayout: React.FC<MainLayoutProps> = ({children, title, description, keywords}) => {
+const MainLayout: React.FC<MainLayoutProps> = ({children, title, description, keywords, className}) => {
     return (
         <>
             <Head>
@@ -20,7 +21,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({children, title, description, ke
                 <meta name={'viewport'} content={'width=device-width, initial-scale=1'}/>
             </Head>
             <Navbar />
-            {children}
+            {className ? <div className={className}>{children}</div> : children}
         </>
     );
 };
