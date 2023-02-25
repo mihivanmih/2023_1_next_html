@@ -49,7 +49,7 @@ const Portfolio: FC = () => {
 
     return (
         <>
-            <MainLayout title={`Slider Portfolio`} title={'Портфолио'}>
+            <MainLayout title={'Портфолио'}>
                 <div className={styles.sliderContent}>
 
                     <div className={`${styles.slide} swiper slider slider1`} >

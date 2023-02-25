@@ -33,6 +33,7 @@ const Navbar = () => {
                         <a href="/gsap">GSAP</a>
                         <a href="/portfolio">Portfolio</a>
                         <a href="/coolours">Coolours</a>
+                        <a href="/auth">Auth</a>
                     </div>
                 </div>
             </div>
