@@ -31,6 +31,17 @@ html, body {
   font-weight: 900;
 }
 
+@font-face {
+  font-family: raleway_f;
+  src: url("../public/fairy/fonts/raleway-regular.woff2");
+}
+
+@font-face {
+  font-family: raleway_f;
+  src: url("../public/fairy/fonts/raleway-black.woff2");
+  font-weight: 900;
+}
+
 .miami .swiper-wrapper {
   transition:  .03s cubic-bezier(.2, .6, 0, 1) !important;
   will-change: transform;
