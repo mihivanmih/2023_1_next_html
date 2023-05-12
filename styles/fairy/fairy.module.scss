@@ -9,6 +9,11 @@
   color: #fff;
   font-family: raleway_f, sans-serif;
   line-height: 1.55;
+
+  & .main {
+    min-height: 100vh;
+  }
+
 }
 
 .mainHeader {
@@ -27,6 +32,10 @@
       position: absolute;
       background-size: cover;
       background-position: center;
+    }
+
+    & .layer_base {
+      transform: translate3d(0, var(--scrollTop), 0);
     }
 
   }
