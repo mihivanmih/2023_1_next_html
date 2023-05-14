@@ -6,18 +6,6 @@ import styles from '@/styles/fairy/fairy.module.scss'
 
 
 const Witcher: FC = () => {
-
-    // // @ts-ignore
-    // useEffect(() => {
-    //     window.addEventListener('scroll', e => {
-    //         document.body.style.setProperty(
-    //             "--scrollTopt" as any,
-    //             `${this.scrollY - 20}px`
-    //         )
-    //     })
-    // }, [])
-
-
     const [offset, setOffset] = useState(0);
 
     useEffect(() => {
@@ -25,13 +13,9 @@ const Witcher: FC = () => {
         // clean up code
         window.removeEventListener('scroll', onScroll)
         window.addEventListener('scroll', onScroll, { passive: true })
-
-
-
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
-    console.log(offset);
 
     if (typeof document === 'undefined') {
         // during server evaluation
@@ -39,7 +23,7 @@ const Witcher: FC = () => {
         const bodyCss = document.querySelector('body')
 
         bodyCss.style.setProperty(
-            "--scrollTopt",
+            "--scrollTop",
             `${offset}px`
         )
     }
@@ -52,17 +36,17 @@ const Witcher: FC = () => {
                 <div className={styles.fairy}>
                     <header className={styles.mainHeader}>
                         <div className={styles.layers}>
-                            <div className="header">
-                                <div className="caption">
+                            <div className={styles.header}>
+                                <div className={styles.caption}>
                                     Welcome to Parallax
                                 </div>
-                                <div className="title">
+                                <div className={styles.title}>
                                     Fairy Forest
                                 </div>
                             </div>
-                            <div className={`${styles.layer} layer_base`} style={{backgroundImage: `url('/img/fairy/layer-base.png')`}}> </div>
-                            <div className={styles.layer} style={{backgroundImage: `url('/img/fairy/layer-middle.png')`}}> </div>
-                            <div className={styles.layer} style={{backgroundImage: `url('/img/fairy/layer-front.png')`}}> </div>
+                            <div className={`${styles.layer} ${styles.layer_base}`} style={{backgroundImage: `url('/img/fairy/layer-base.png')`}}> </div>
+                            <div className={`${styles.layer}  ${styles.layer_middle}`} style={{backgroundImage: `url('/img/fairy/layer-middle.png')`}}> </div>
+                            <div className={`${styles.layer}  ${styles.layer_front}`} style={{backgroundImage: `url('/img/fairy/layer-front.png')`}}> </div>
                         </div>
                     </header>
 
