@@ -7,6 +7,39 @@
 
   & .main {
     min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: #e7e7e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+
+    & .header {
+      text-transform: uppercase;
+      font-size: calc(var(--sizeindex) * 1.8);
+      letter-spacing: calc(var(--sizeindex) / 7.5);
+      transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+      will-change: transform;
+    }
+
+    & p {
+      max-width:  calc(var(--sizeindex) * 30);
+      font-size: calc(var(--sizeindex) * .9);
+      margin-top: calc(var(--sizeindex) / 1.25);
+      transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+      will-change: transform;
+    }
+
+    & .copy {
+      position: absolute;
+      bottom: calc(var(--sizeindex) * 2.5);
+      opacity: .45;
+      font-size: calc(var(--sizeindex) * .75);
+      letter-spacing: calc(var(--sizeindex) / 37.5);
+    }
+
   }
 
 }

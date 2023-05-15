@@ -1,7 +1,6 @@
 import React from 'react'
 import MainLayout from '../../layots/MainLayout'
 import styles from '@/styles/gsap/gsap.module.scss'
-import Script from 'next/script'
 import Draggable from 'react-draggable'
 
 const Gsap = () => {
