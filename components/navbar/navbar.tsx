@@ -35,6 +35,7 @@ const Navbar = () => {
                         <a href="/coolours">Coolours</a>
                         <a href="/auth">Auth</a>
                         <a href="/fairy">Fairy forest</a>
+                        <a href="/assasin">Assasin's Creed</a>
                     </div>
                 </div>
             </div>
