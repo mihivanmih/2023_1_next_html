@@ -41,6 +41,13 @@ html, body {
   font-weight: 900;
 }
 
+@font-face {
+  font-family: assassin_st;
+  src: url("../public/assasin/font/assassin.woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
 .miami .swiper-wrapper {
   transition:  .03s cubic-bezier(.2, .6, 0, 1) !important;
   will-change: transform;

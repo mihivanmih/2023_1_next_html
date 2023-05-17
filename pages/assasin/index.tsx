@@ -4,9 +4,24 @@ import styles from '@/styles/assasin/assasin.module.scss'
 
 
 const Assasin = () => {
-     return (
+    return (
         <MainLayout title={"Assasin's Creed"} className={`${styles.auth}`}>
-           d
+            <div className="wrapper">
+                <div className="content">
+                    <div className={styles.assasin}>
+                        <div className={styles.showcase}>
+                            <div className={styles.contentWrapper}>
+                                <div className={styles.content}>
+
+                                    asdas
+                                    <video src="/assasin/videos/smoke-background-optimized.mp4" className={styles.video} autoPlay loop muted />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </MainLayout>
     );
 };
