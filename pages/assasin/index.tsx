@@ -14,10 +14,10 @@ const Assasin = () => {
                                 <div className={styles.content}>
 
                                     asdas
-                                    <video src="/assasin/videos/smoke-background-optimized.mp4" className={styles.video} autoPlay loop muted />
 
                                 </div>
                             </div>
+                            <video src="/assasin/videos/smoke-background-optimized.mp4" className={styles.video} autoPlay loop muted />
                         </div>
                     </div>
                 </div>
