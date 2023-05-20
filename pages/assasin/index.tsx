@@ -10,6 +10,9 @@ const Assasin = () => {
                 <div className="content">
                     <div className={styles.assasin}>
                         <div className={styles.showcase}>
+
+                            <h2 className={styles.header}>Hoodie <span>Mantle</span></h2>
+
                             <div className={styles.contentWrapper}>
                                 <div className={styles.content}>
 
