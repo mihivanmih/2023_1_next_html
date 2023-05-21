@@ -1,11 +1,11 @@
 import React, {FC, useEffect, useRef, useState} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {Mousewheel, Parallax} from "swiper";
-import 'swiper/css';
 import Sound, {transitionStart} from "@/components/sound/sound";
 import Head from "next/head";
 import Script from 'next/script'
 import styles from '@/styles/witcher/Witcher.module.scss'
+import 'swiper/css';
 
 const Witcher: FC = () => {
     const refSound = useRef<HTMLInputElement>(null)
@@ -16,7 +16,7 @@ const Witcher: FC = () => {
             <Head>
                 <title>The wither</title>
             </Head>
-            <Script src="/libs/particles/particles.js"
+            <Script src="/libs/witcher/witcher.js"
                     strategy="lazyOnload" />
             <Sound melody={"/sounds/Pesnya_Priscilly.mp3"} refSound={refSound} refPlayer={refPlayer}/>
             <Swiper
