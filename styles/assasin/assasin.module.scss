@@ -110,6 +110,9 @@
     opacity: .8 !important;
     transform: scale(.98) !important;
   }
+  :global(.swiper) {
+    overflow: visible !important;
+  }
 
   & .Slide {
     position: relative;
@@ -118,6 +121,26 @@
     opacity: .25;
     transform: scale(.75);
     transition: opacity 1.8s cubic-bezier(.4, 0, 0, 1), transform 1.8s cubic-bezier(.4, 0, 0, 1);
+
+    &:after {
+      content: '';
+      width: 120px;
+      height: 0;
+      position: absolute;
+      box-shadow: 0 0 45px 10px #010101;
+      bottom: 5px;
+      left: calc(50% - 60px);
+    }
+
+    & p {
+      position: absolute;
+      bottom: -85px;
+      width: 100%;
+      font-family: assassin_st, sans-serif;
+      font-size: 32px;
+      color: rgba(255, 255, 255, .5);
+      text-shadow: rgb(58 78 94) 0 0 10px;
+    }
 
     & .imageWrapper {
       .imageLeft {
@@ -141,4 +164,5 @@
 
 
 }
+
 
