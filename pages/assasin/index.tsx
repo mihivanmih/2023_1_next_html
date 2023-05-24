@@ -36,7 +36,9 @@ const Assasin = () => {
                                                         </div>
                                                     </div>
                                                   <div className={styles.imageRight}>
+                                                      <div className={styles.crouselImg} style={{ backgroundImage: `url(/img/assasin/1.png`}}>
 
+                                                      </div>
                                                     </div>
                                                 </div>
                                                 <p>Front</p>
@@ -49,7 +51,9 @@ const Assasin = () => {
                                                         </div>
                                                     </div>
                                                   <div className={styles.imageRight}>
+                                                      <div className={styles.crouselImg} style={{ backgroundImage: `url(/img/assasin/2.png`}}>
 
+                                                      </div>
                                                     </div>
                                                 </div>
                                                 <p>Front 2</p>
@@ -62,7 +66,9 @@ const Assasin = () => {
                                                         </div>
                                                     </div>
                                                   <div className={styles.imageRight}>
+                                                      <div className={styles.crouselImg} style={{ backgroundImage: `url(/img/assasin/3.png`}}>
 
+                                                      </div>
                                                     </div>
                                                 </div>
                                                 <p>Side</p>
@@ -75,7 +81,9 @@ const Assasin = () => {
                                                         </div>
                                                     </div>
                                                   <div className={styles.imageRight}>
+                                                      <div className={styles.crouselImg} style={{ backgroundImage: `url(/img/assasin/4.png`}}>
 
+                                                      </div>
                                                     </div>
                                                 </div>
                                                 <p>Back</p>
