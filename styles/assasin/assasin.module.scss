@@ -41,6 +41,50 @@
       height: 100vh;
       padding: 120px 0;
 
+      & .navigation {
+        overflow: hidden;
+        position: absolute;
+        z-index: 2;
+        inset: 0;
+
+        & div {
+          height: 100%;
+          width: 50%;
+          outline: none;
+          position: absolute;
+          cursor: pointer;
+
+          &::before {
+            content: '?';
+            font-family: assassin_st;
+            opacity: 0;
+            transition: opacity .75s ease-out;
+            position: absolute;
+            transform: rotate(-90deg);
+            left: 50px;
+            top: 50%;
+            font-size: 45px;
+          }
+
+          &:hover::before {
+            opacity: .25;
+          }
+
+        }
+
+        & .next {
+          right: 0;
+
+          &::before {
+            transform: rotate(90deg);
+            right: 50px;
+            left: auto;
+          }
+        }
+
+      }
+
+
       & .content {
 
       &::before {
@@ -86,6 +130,9 @@
   }
   :global(.swiper) {
     overflow: visible !important;
+  }
+  :global(.swiper-wrapper) {
+    transition: cubic-bezier(.4, 0, 0, 1);
   }
 
   & .Slide {
