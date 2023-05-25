@@ -1,13 +1,13 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import MainLayout from "@/layots/MainLayout";
-import {transitionStart} from "@/components/sound/sound";
-import {Mousewheel, Parallax} from "swiper";
+import { Navigation} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
 import styles from '@/styles/assasin/assasin.module.scss'
 import 'swiper/css';
 
 
 const Assasin = () => {
+    const swiperRef = useRef();
     return (
         <MainLayout title={"Assasin's Creed"} className={`${styles.auth}`}>
             <div className="wrapper">
@@ -27,6 +27,10 @@ const Assasin = () => {
                                             slidesPerView={3}
                                             speed={1800}
                                             centeredSlides={true}
+                                            modules={[Navigation]}
+                                            onBeforeInit={(swiper) => {
+                                                swiperRef.current = swiper;
+                                            }}
                                         >
                                             <SwiperSlide className={styles.Slide}>
                                                 <div className={styles.imageWrapper}>
@@ -93,6 +97,16 @@ const Assasin = () => {
                                     </div>
 
                                 </div>
+
+                                <div className={styles.navigation}>
+                                    <div className={styles.prev} onClick={() => swiperRef.current?.slidePrev()} >
+
+                                    </div>
+                                    <div className={styles.next} onClick={() => swiperRef.current?.slideNext()} >
+
+                                    </div>
+                                </div>
+
                             </div>
                             <video src="/assasin/videos/smoke-background-optimized.mp4" className={styles.video} autoPlay loop muted />
                         </div>
