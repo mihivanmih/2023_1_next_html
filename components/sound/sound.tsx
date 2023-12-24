@@ -12,7 +12,8 @@ export const transitionStart = (refPlayer, refSound) => {
      refSound.current?.getAttribute('data-click') === "0" ? pausePlay("play", refPlayer, refSound) : pausePlay("pause", refPlayer, refSound)
 }
 
-// включение, выключение звука
+
+// включение, выключение звука.
 const pausePlay = (tune, refPlayer, refSound) => {
     const soundPlayer = tune === "play"
 
@@ -42,7 +43,7 @@ const Sound: FC<SoundProps> = ({melody, refSound, refPlayer}) => {
             <audio id="player" src={melody} ref={refPlayer} />
             <div className={`${style.sound} ${style.mute}`} data-sound="0" data-click="0" onClick={soundHandler} ref={refSound} />
         </>
-    );
-};
+    )
+}
 
-export default Sound;
+export default Sound
