@@ -16,7 +16,7 @@ const Witcher: FC = () => {
             <Head>
                 <title>The wither</title>
             </Head>
-            <Script src="/libs/witcher/witcher.js"
+            <Script src="/libs/witcher/particles.js"
                     strategy="lazyOnload" />
             <Sound melody={"/sounds/Pesnya_Priscilly.mp3"} refSound={refSound} refPlayer={refPlayer}/>
             <Swiper
